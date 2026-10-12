@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'controller = lab02_pkg.controller:main',
         ],
     },
 )
