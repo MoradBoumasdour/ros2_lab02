@@ -12,7 +12,6 @@ class ControllerNode(Node):
     def __init__(self):
         super().__init__('controller')
 
-        self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
         self.velMax = 0.22
         self.velAngMax = 1.5
         self.loopControl = 0.2
@@ -21,23 +20,30 @@ class ControllerNode(Node):
         self.current_yaw = 0.0
         self.target_yaw = 0.0
         self.exact_yaw = 0.0
-
+        #publisher of robot's movement
+        self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
+        #read Laidar tiopic
         self.laser_sub = self.create_subscription(
             LaserScan,
             'scan',
             self.LidarCallback,
             10)
+        #read Odometry topic
         self.odom_sub = self.create_subscription(
             Odometry,
             'odom',
             self.odomCallback,
             10)
+        #read real odometry of robot
         self.ground_truth_sub = self.create_subscription(
             Odometry,
             'ground_truth',
             self.groundTruthCallback,
             10)
 
+    # The LidrCallback function reads the ranges from LaserScan message of the Lidar,
+    # caps the values to avoid problems with inf and nan values.
+    # It then calls the moving function to control the robot's movement based on the processed ranges.
     def LidarCallback(self, msg):
         self.get_logger().info("Recieved from Lidar:")
         capmax = 3.5
@@ -50,7 +56,9 @@ class ControllerNode(Node):
         ranges_np[badRangesMin] = capmin
 
         self.moving(ranges_np)
-        
+
+    # The odomCallback function reads the orientation from the Odometry message,
+    # converts the quaternion to Euler angles, and updates the current yaw of the robot.  
     def odomCallback(self, msg):
         quat = [
             msg.pose.pose.orientation.x, 
@@ -60,6 +68,9 @@ class ControllerNode(Node):
         ]
         _, _, self.current_yaw = tf_transformations.euler_from_quaternion(quat)
 
+    # The groundTruthCallback function reads the orientation from the ground truth Odometry message,
+    # converts the quaternion to Euler angles, and updates the exact yaw of the robot.
+    # It also calculates the yaw error between the current yaw and the exact yaw, normalizes it to avoid jumps at 360 degrees, and logs the error.
     def groundTruthCallback(self, msg):
         quat = [
             msg.pose.pose.orientation.x, 
@@ -80,7 +91,9 @@ class ControllerNode(Node):
             
         self.get_logger().info(f"Error (Yaw): {yaw_error:.4f} rad")
 
-
+    # The moving function controls the robot's movement based on the current state and the processed ranges from the Lidar.
+    # In the 'FORWARD' state, it checks the distance to obstacles in front of the robot and decides whether to move forward or switch to the 'TURNING' state.
+    # In the 'TURNING' state, it calculates the error between the target yaw and the current yaw, and adjusts the robot's angular velocity to rotate towards the target yaw.  
     def moving(self, ranges):
         msg = Twist()
         if self.state == 'FORWARD':
@@ -144,7 +157,8 @@ class ControllerNode(Node):
                 
             self.publisher.publish(msg)    
                 
-
+# The main function initializes the ROS2 node, creates an instance of the ControllerNode, and starts spinning to process incoming messages.
+# It also ensures proper cleanup by destroying the node and shutting down ROS2 when the program is terminated.
 def main(args = None):
     rclpy.init(args=args)
     node = ControllerNode()
