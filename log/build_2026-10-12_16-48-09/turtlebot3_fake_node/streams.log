@@ -1,0 +1,81 @@
+[0.018s] Invoking command in '/home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/moradlinux/ros2_lab_workspace/install/py_pubsub:/home/moradlinux/ros2_lab_workspace/install/lab02_pkg:/home/moradlinux/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake /home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_fake_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node
+[0.331s] -- The C compiler identification is GNU 11.4.0
+[0.331s] -- The CXX compiler identification is GNU 11.4.0
+[0.331s] -- Detecting C compiler ABI info
+[0.398s] -- Detecting C compiler ABI info - done
+[0.408s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.408s] -- Detecting C compile features
+[0.408s] -- Detecting C compile features - done
+[0.410s] -- Detecting CXX compiler ABI info
+[0.519s] -- Detecting CXX compiler ABI info - done
+[0.524s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.524s] -- Detecting CXX compile features
+[0.525s] -- Detecting CXX compile features - done
+[0.526s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.634s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.677s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.693s] -- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.785s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.788s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.794s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.801s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.813s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.839s] -- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.850s] -- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+[0.874s] -- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.876s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.394s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.786s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.469s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.474s] -- Looking for pthread.h
+[2.537s] -- Looking for pthread.h - found
+[2.537s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.598s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.598s] -- Found Threads: TRUE  
+[2.625s] -- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.638s] -- Found tf2: 0.25.23 (/opt/ros/humble/share/tf2/cmake)
+[2.646s] -- Found tf2_msgs: 0.25.23 (/opt/ros/humble/share/tf2_msgs/cmake)
+[2.671s] -- Found turtlebot3_msgs: 2.4.0 (/opt/ros/humble/share/turtlebot3_msgs/cmake)
+[2.731s] -- Configuring done
+[2.738s] -- Generating done
+[2.742s] -- Build files have been written to: /home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node
+[2.748s] Invoked command in '/home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/moradlinux/ros2_lab_workspace/install/py_pubsub:/home/moradlinux/ros2_lab_workspace/install/lab02_pkg:/home/moradlinux/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake /home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_fake_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node
+[2.749s] Invoking command in '/home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/moradlinux/ros2_lab_workspace/install/py_pubsub:/home/moradlinux/ros2_lab_workspace/install/lab02_pkg:/home/moradlinux/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --build /home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node -- -j8 -l8
+[2.779s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_fake_node.dir/src/turtlebot3_fake_node.cpp.o[0m
+[9.254s] [100%] [32m[1mLinking CXX executable turtlebot3_fake_node[0m
+[9.566s] [100%] Built target turtlebot3_fake_node
+[9.572s] Invoked command in '/home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/moradlinux/ros2_lab_workspace/install/py_pubsub:/home/moradlinux/ros2_lab_workspace/install/lab02_pkg:/home/moradlinux/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --build /home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node -- -j8 -l8
+[9.577s] Invoking command in '/home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/moradlinux/ros2_lab_workspace/install/py_pubsub:/home/moradlinux/ros2_lab_workspace/install/lab02_pkg:/home/moradlinux/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --install /home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node
+[9.581s] -- Install configuration: ""
+[9.581s] -- Execute custom install script
+[9.582s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node
+[9.587s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py
+[9.592s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py:Zone.Identifier
+[9.597s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py
+[9.602s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py:Zone.Identifier
+[9.608s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml
+[9.613s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml:Zone.Identifier
+[9.618s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml
+[9.623s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml:Zone.Identifier
+[9.629s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml
+[9.634s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml:Zone.Identifier
+[9.639s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp
+[9.646s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp:Zone.Identifier
+[9.652s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node
+[9.657s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node
+[9.663s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.sh
+[9.669s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.dsv
+[9.674s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.sh
+[9.679s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.dsv
+[9.684s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.bash
+[9.689s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.sh
+[9.695s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.zsh
+[9.700s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.dsv
+[9.705s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv
+[9.710s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/ament_index/resource_index/packages/turtlebot3_fake_node
+[9.715s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[9.721s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[9.727s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig.cmake
+[9.732s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig-version.cmake
+[9.737s] -- Symlinking: /home/moradlinux/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.xml
+[9.744s] Invoked command in '/home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/moradlinux/ros2_lab_workspace/install/py_pubsub:/home/moradlinux/ros2_lab_workspace/install/lab02_pkg:/home/moradlinux/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --install /home/moradlinux/ros2_lab_workspace/build/turtlebot3_fake_node
