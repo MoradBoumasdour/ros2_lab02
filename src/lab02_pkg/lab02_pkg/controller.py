@@ -36,10 +36,14 @@ class ControllerNode(Node):
         self.get_logger().info("Recieved from Lidar:")
         capmax = 3.5
         capmin = 0.12
-        self.get_logger().info(f"dimesnione:{len(msg.ranges)}")
-        cappedRanges = [min(valore, capmax) for valore in msg.ranges]
-        cappedRanges = [max(valore, capmin) for valore in cappedRanges]
-        self.moving(cappedRanges)
+        ranges_np = np.array(msg.ranges) #transform in numPy array
+
+        badRangesMax = np.isinf(ranges_np) | np.isnan(ranges_np) #capping the values of the ranges to avoid problems with inf and nan values
+        badRangesMin = ranges_np < capmin 
+        ranges_np[badRangesMax] = capmax
+        ranges_np[badRangesMin] = capmin
+
+        self.moving(ranges_np)
         
     def odomCallback(self, msg):
         quat = [
@@ -51,10 +55,11 @@ class ControllerNode(Node):
         _, _, self.current_yaw = tf_transformations.euler_from_quaternion(quat)
 
     def moving(self, ranges):
-        
         msg = Twist()
         if self.state == 'FORWARD':
-            if min(ranges[0:5] + ranges[-5:]) > self.bumperThreshold:
+            front_scan = np.concatenate((ranges[0:5], ranges[-5:])) #using np.median to avoid outliers in the front scan 
+            front_dist = np.median(front_scan)                      #given by gaussian errors in the lidar readings                     
+            if front_dist > self.bumperThreshold:
                 msg.linear.x = self.velMax
                 msg.angular.z = 0.0
                 self.publisher.publish(msg)
@@ -64,15 +69,17 @@ class ControllerNode(Node):
                 self.state = 'TURNING'
                 msg.linear.x = 0.0
                 self.publisher.publish(msg)
+
                 num_ranges = len(ranges)
                 left_idx = int(num_ranges * 0.25)
                 right_idx = int(num_ranges * 0.75)
-                dist_left = min(ranges[left_idx-5 : left_idx+5])
-                dist_right = min(ranges[right_idx-5 : right_idx+5])
+
+                dist_left = np.median(ranges[left_idx-5 : left_idx+5])
+                dist_right = np.median(ranges[right_idx-5 : right_idx+5])
                 
-                #da levare per debug
-                self.get_logger().info(f"distanza a destra:{dist_right}")
-                self.get_logger().info(f"distanza a sinistra:{dist_left}")
+                #for debug
+                self.get_logger().info(f"distance to the right:{dist_right:.2f}")
+                self.get_logger().info(f"distance to the left:{dist_left:.2f}")
                 
                 if dist_left>dist_right:
                     self.target_yaw = self.current_yaw + (math.pi / 2.0)
@@ -80,7 +87,7 @@ class ControllerNode(Node):
                 else:
                     self.target_yaw = self.current_yaw - (math.pi / 2.0)
                     self.turn_direction = -1.0 # clockwise rotation
-                #normalization around 180 -180
+                #normalization around pi -pi
                 if self.target_yaw > math.pi:
                     self.target_yaw -= 2 * math.pi
                 elif self.target_yaw < -math.pi:
