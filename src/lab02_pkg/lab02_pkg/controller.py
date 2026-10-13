@@ -20,8 +20,9 @@ class ControllerNode(Node):
         self.state = 'FORWARD'
         self.current_yaw = 0.0
         self.target_yaw = 0.0
+        self.exact_yaw = 0.0
 
-        self.subscription = self.create_subscription(
+        self.laser_sub = self.create_subscription(
             LaserScan,
             'scan',
             self.LidarCallback,
@@ -30,6 +31,11 @@ class ControllerNode(Node):
             Odometry,
             'odom',
             self.odomCallback,
+            10)
+        self.ground_truth_sub = self.create_subscription(
+            Odometry,
+            'ground_truth',
+            self.groundTruthCallback,
             10)
 
     def LidarCallback(self, msg):
@@ -53,6 +59,27 @@ class ControllerNode(Node):
             msg.pose.pose.orientation.w
         ]
         _, _, self.current_yaw = tf_transformations.euler_from_quaternion(quat)
+
+    def groundTruthCallback(self, msg):
+        quat = [
+            msg.pose.pose.orientation.x, 
+            msg.pose.pose.orientation.y, 
+            msg.pose.pose.orientation.z, 
+            msg.pose.pose.orientation.w
+        ]
+        _, _, self.exact_yaw = tf_transformations.euler_from_quaternion(quat)
+        
+        
+        yaw_error = self.current_yaw - self.exact_yaw
+        
+        # Normalizzazione dell'errore per evitare salti a 360 gradi
+        if yaw_error > math.pi:
+            yaw_error -= 2 * math.pi
+        elif yaw_error < -math.pi:
+            yaw_error += 2 * math.pi
+            
+        self.get_logger().info(f"Error (Yaw): {yaw_error:.4f} rad")
+
 
     def moving(self, ranges):
         msg = Twist()
