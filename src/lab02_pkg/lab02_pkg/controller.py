@@ -36,11 +36,11 @@ class ControllerNode(Node):
             self.odomCallback,
             10)
         #read real odometry of robot
-        self.ground_truth_sub = self.create_subscription(
-            Odometry,
-            'ground_truth',
-            self.groundTruthCallback,
-            10)
+        # self.ground_truth_sub = self.create_subscription(
+        #     Odometry,
+        #     'ground_truth',
+        #     self.groundTruthCallback,
+        #     10)
 
     # The LidrCallback function reads the ranges from LaserScan message of the Lidar,
     # caps the values to avoid problems with inf and nan values.
@@ -100,9 +100,9 @@ class ControllerNode(Node):
     # In the 'TURNING' state, it calculates the error between the target yaw and the current yaw, and adjusts the robot's angular velocity to rotate towards the target yaw.  
     def moving(self, ranges, angle_min, angle_max, angle_increment):
         msg = Twist()
-        rangeTotal = 0,174533
+        rangeTotal = 0.174533
         indexRange = math.ceil(rangeTotal/(2*angle_increment))
-        if (angle_min<0.0872665 and angle_max>(6,28319-0.0872665) ):
+        if (angle_min<0.0872665 and angle_max>(6.28319-0.0872665) ):
             if self.state == 'FORWARD':
                 front_scan = np.concatenate((ranges[0:5], ranges[-5:])) #using np.median to avoid outliers in the front scan 
                 front_dist = np.median(front_scan)                      #given by gaussian errors in the lidar readings                     
