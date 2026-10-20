@@ -1,0 +1,5 @@
+[0.428s] Invoking command in '/home/leonardo/ros2_lab_workspace/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_lab_workspace/install/lab02_pkg:/home/leonardo/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --build /home/leonardo/ros2_lab_workspace/build/turtlebot3_gazebo -- -j8 -l8
+[0.432s] [0mCMake Error: The current CMakeCache.txt directory /home/leonardo/ros2_lab_workspace/build/turtlebot3_gazebo/CMakeCache.txt is different than the directory /home/moradlinux/ros2_lab_workspace/build/turtlebot3_gazebo where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.444s] [0mCMake Error: The source directory "/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_gazebo" does not exist.
+[0.444s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.444s] gmake: *** [Makefile:390: cmake_check_build_system] Error 1
