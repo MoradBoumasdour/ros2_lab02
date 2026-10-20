@@ -1,1 +1,1 @@
-/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_gazebo/launch/robot_state_publisher.launch.py
+/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_gazebo/launch/robot_state_publisher.launch.py

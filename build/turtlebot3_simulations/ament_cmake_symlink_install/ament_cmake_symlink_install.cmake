@@ -23,7 +23,7 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/moradlinux/ros2_lab_workspace/install/turtlebot3_simulations/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/leonardo/ros2_lab_workspace/install/turtlebot3_simulations/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -128,7 +128,7 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/moradlinux/ros2_lab_workspace/install/turtlebot3_simulations/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/leonardo/ros2_lab_workspace/install/turtlebot3_simulations/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -186,7 +186,7 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
-    set(ARG_DESTINATION "/home/moradlinux/ros2_lab_workspace/install/turtlebot3_simulations/${ARG_DESTINATION}")
+    set(ARG_DESTINATION "/home/leonardo/ros2_lab_workspace/install/turtlebot3_simulations/${ARG_DESTINATION}")
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -256,7 +256,7 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
-      set(destination "/home/moradlinux/ros2_lab_workspace/install/turtlebot3_simulations/${destination}")
+      set(destination "/home/leonardo/ros2_lab_workspace/install/turtlebot3_simulations/${destination}")
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -315,44 +315,44 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_simulations/environment")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_simulations/environment")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_simulations/environment")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_simulations/environment")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_simulations/environment")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_simulations/environment")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/turtlebot3_simulations/environment")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_simulations")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_simulations")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_simulations")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_simulations")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_simulations")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_simulations")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_simulations")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_simulations")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_simulations")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_simulations")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_simulations")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_simulations")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_simulations")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_simulations")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_simulations")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/turtlebot3_simulations")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_simulations")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_simulations")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_simulations")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/turtlebot3_simulations")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/packages")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_simulations" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig.cmake" "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig-version.cmake" "DESTINATION" "share/turtlebot3_simulations/cmake")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig.cmake" "/home/moradlinux/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig-version.cmake" "DESTINATION" "share/turtlebot3_simulations/cmake")
+# install(FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig.cmake" "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig-version.cmake" "DESTINATION" "share/turtlebot3_simulations/cmake")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig.cmake" "/home/leonardo/ros2_lab_workspace/build/turtlebot3_simulations/ament_cmake_core/turtlebot3_simulationsConfig-version.cmake" "DESTINATION" "share/turtlebot3_simulations/cmake")
 
-# install(FILES "/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations/package.xml" "DESTINATION" "share/turtlebot3_simulations")
-ament_cmake_symlink_install_files("/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/moradlinux/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations/package.xml" "DESTINATION" "share/turtlebot3_simulations")
+# install(FILES "/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations/package.xml" "DESTINATION" "share/turtlebot3_simulations")
+ament_cmake_symlink_install_files("/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations" FILES "/home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_simulations/package.xml" "DESTINATION" "share/turtlebot3_simulations")
