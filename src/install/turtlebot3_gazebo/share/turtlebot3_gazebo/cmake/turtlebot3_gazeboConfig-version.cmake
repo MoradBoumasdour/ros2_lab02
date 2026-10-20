@@ -1,0 +1,1 @@
+/home/leonardo/ros2_lab_workspace/src/build/turtlebot3_gazebo/ament_cmake_core/turtlebot3_gazeboConfig-version.cmake
