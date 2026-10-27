@@ -46,7 +46,7 @@ class ControllerNode(Node):
     # caps the values to avoid problems with inf and nan values.
     # It then calls the moving function to control the robot's movement based on the processed ranges.
     def LidarCallback(self, msg):
-        self.get_logger().info("Recieved from Lidar:")
+        #self.get_logger().info("Recieved ranges from Lidar")
         capmax = 3.5
         capmin = 0.12
         ranges_np = np.array(msg.ranges) #transform in numPy array
@@ -100,12 +100,12 @@ class ControllerNode(Node):
     # In the 'TURNING' state, it calculates the error between the target yaw and the current yaw, and adjusts the robot's angular velocity to rotate towards the target yaw.  
     def moving(self, ranges, angle_min, angle_max, angle_increment):
         msg = Twist()
-        rangeTotal = 0.174533
-        indexRange = math.ceil(rangeTotal/(2*angle_increment))
-        if (angle_min<0.0872665 and angle_max>(6.28319-0.0872665) ):
+        rangeTotal = 0.174533 #10 degrees (in rad) of range for forward and side scan
+        indexRange = math.ceil(rangeTotal/(2*angle_increment)) #calculates the half of index in order to get  total 10 degrees range
+        if (angle_min<0.0872665 and angle_max>(6.28319-0.0872665) ): #if angle min is smaller then 5 degrees an angle max greater than 355 degrees the data are used other way discarded
             if self.state == 'FORWARD':
-                front_scan = np.concatenate((ranges[0:5], ranges[-5:])) #using np.median to avoid outliers in the front scan 
-                front_dist = np.median(front_scan)                      #given by gaussian errors in the lidar readings                     
+                front_scan = np.concatenate((ranges[0:indexRange], ranges[-indexRange:]))
+                front_dist = np.median(front_scan) #using np.median to avoid outliers in the front scan given by gaussian errors in the lidar readings                     
                 if front_dist > self.bumperThreshold:
                     msg.linear.x = self.velMax
                     msg.angular.z = 0.0
@@ -121,8 +121,8 @@ class ControllerNode(Node):
                     left_idx =math.ceil(num_ranges * 0.25)
                     right_idx = math.ceil(num_ranges * 0.75)
 
-                    dist_left = np.median(ranges[left_idx-indexRange : left_idx+indexRange])
-                    dist_right = np.median(ranges[right_idx-indexRange : right_idx+indexRange])
+                    dist_left = np.median(ranges[left_idx-indexRange : left_idx+indexRange])#using np.median to avoid outliers in the front scan given by gaussian errors in the lidar readings              
+                    dist_right = np.median(ranges[right_idx-indexRange : right_idx+indexRange])#using np.median to avoid outliers in the front scan given by gaussian errors in the lidar readings              
                     
                     #for debug
                     self.get_logger().info(f"distance to the right:{dist_right:.2f}")
