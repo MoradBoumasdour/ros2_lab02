@@ -1,0 +1,49 @@
+running develop
+Removing /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01-pkg.egg-link (link to .)
+running egg_info
+writing ../../build/lab01_pkg/lab01_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/lab01_pkg/lab01_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/lab01_pkg/lab01_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/lab01_pkg/lab01_pkg.egg-info/requires.txt
+writing top-level names to ../../build/lab01_pkg/lab01_pkg.egg-info/top_level.txt
+reading manifest file '../../build/lab01_pkg/lab01_pkg.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/lab01_pkg/lab01_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build
+creating /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib
+creating /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg
+copying lab01_pkg/__init__.py -> /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg
+copying lab01_pkg/controller_reset.py -> /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg
+copying lab01_pkg/localization_reset.py -> /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg
+copying lab01_pkg/controller.py -> /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg
+copying lab01_pkg/reset_node.py -> /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg
+copying lab01_pkg/localization.py -> /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg
+running install
+running install_lib
+creating /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg
+copying /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg/__init__.py -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg
+copying /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg/controller_reset.py -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg
+copying /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg/localization_reset.py -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg
+copying /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg/controller.py -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg
+copying /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg/reset_node.py -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg
+copying /home/leonardo/ros2_lab_workspace/build/lab01_pkg/build/lib/lab01_pkg/localization.py -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg
+byte-compiling /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg/controller_reset.py to controller_reset.cpython-310.pyc
+byte-compiling /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg/localization_reset.py to localization_reset.cpython-310.pyc
+byte-compiling /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg/controller.py to controller.cpython-310.pyc
+byte-compiling /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg/reset_node.py to reset_node.cpython-310.pyc
+byte-compiling /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg/localization.py to localization.cpython-310.pyc
+running install_data
+copying resource/lab01_pkg -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/leonardo/ros2_lab_workspace/install/lab01_pkg/share/lab01_pkg
+running install_egg_info
+Copying ../../build/lab01_pkg/lab01_pkg.egg-info to /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/python3.10/site-packages/lab01_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing controller script to /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/lab01_pkg
+Installing controller_reset script to /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/lab01_pkg
+Installing localization script to /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/lab01_pkg
+Installing localization_reset script to /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/lab01_pkg
+Installing reset_node script to /home/leonardo/ros2_lab_workspace/install/lab01_pkg/lib/lab01_pkg
+writing list of installed files to '/home/leonardo/ros2_lab_workspace/build/lab01_pkg/install.log'

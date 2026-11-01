@@ -1,0 +1,36 @@
+[4.308s] Invoking command in '/home/leonardo/ros2_lab_workspace/build/lab02_pkg': PYTHONPATH=/home/leonardo/ros2_lab_workspace/build/lab02_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build
+[5.184s] running develop
+[5.669s] Removing /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages/lab02-pkg.egg-link (link to .)
+[5.923s] Invoked command in '/home/leonardo/ros2_lab_workspace/build/lab02_pkg' returned '0': PYTHONPATH=/home/leonardo/ros2_lab_workspace/build/lab02_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build
+[5.924s] Invoking command in '/home/leonardo/ros2_lab_workspace/src/lab02_pkg': PYTHONPATH=/home/leonardo/ros2_lab_workspace/build/lab02_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab02_pkg build --build-base /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build install --record /home/leonardo/ros2_lab_workspace/build/lab02_pkg/install.log --install-scripts $base/lib/lab02_pkg --single-version-externally-managed install_data --force
+[6.787s] running egg_info
+[6.787s] writing ../../build/lab02_pkg/lab02_pkg.egg-info/PKG-INFO
+[6.788s] writing dependency_links to ../../build/lab02_pkg/lab02_pkg.egg-info/dependency_links.txt
+[6.788s] writing entry points to ../../build/lab02_pkg/lab02_pkg.egg-info/entry_points.txt
+[6.788s] writing requirements to ../../build/lab02_pkg/lab02_pkg.egg-info/requires.txt
+[6.789s] writing top-level names to ../../build/lab02_pkg/lab02_pkg.egg-info/top_level.txt
+[6.801s] reading manifest file '../../build/lab02_pkg/lab02_pkg.egg-info/SOURCES.txt'
+[6.806s] writing manifest file '../../build/lab02_pkg/lab02_pkg.egg-info/SOURCES.txt'
+[6.808s] running build
+[6.809s] running build_py
+[6.809s] creating /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build
+[6.813s] creating /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build/lib
+[6.815s] creating /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build/lib/lab02_pkg
+[6.819s] copying lab02_pkg/__init__.py -> /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build/lib/lab02_pkg
+[6.820s] copying lab02_pkg/controller.py -> /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build/lib/lab02_pkg
+[6.821s] running install
+[6.825s] running install_lib
+[6.828s] creating /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages/lab02_pkg
+[6.829s] copying /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build/lib/lab02_pkg/__init__.py -> /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages/lab02_pkg
+[6.829s] copying /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build/lib/lab02_pkg/controller.py -> /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages/lab02_pkg
+[6.830s] byte-compiling /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages/lab02_pkg/__init__.py to __init__.cpython-310.pyc
+[6.834s] byte-compiling /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages/lab02_pkg/controller.py to controller.cpython-310.pyc
+[6.836s] running install_data
+[6.837s] copying resource/lab02_pkg -> /home/leonardo/ros2_lab_workspace/install/lab02_pkg/share/ament_index/resource_index/packages
+[6.838s] copying package.xml -> /home/leonardo/ros2_lab_workspace/install/lab02_pkg/share/lab02_pkg
+[6.838s] running install_egg_info
+[6.843s] Copying ../../build/lab02_pkg/lab02_pkg.egg-info to /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages/lab02_pkg-0.0.0-py3.10.egg-info
+[6.860s] running install_scripts
+[6.958s] Installing controller script to /home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/lab02_pkg
+[6.965s] writing list of installed files to '/home/leonardo/ros2_lab_workspace/build/lab02_pkg/install.log'
+[7.137s] Invoked command in '/home/leonardo/ros2_lab_workspace/src/lab02_pkg' returned '0': PYTHONPATH=/home/leonardo/ros2_lab_workspace/build/lab02_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/leonardo/ros2_lab_workspace/install/lab02_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/lab02_pkg build --build-base /home/leonardo/ros2_lab_workspace/build/lab02_pkg/build install --record /home/leonardo/ros2_lab_workspace/build/lab02_pkg/install.log --install-scripts $base/lib/lab02_pkg --single-version-externally-managed install_data --force

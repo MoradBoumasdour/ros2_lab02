@@ -1,0 +1,54 @@
+[0.179s] Invoking command in '/home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_lab_workspace/install/lab02_pkg:/home/leonardo/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake /home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_fake_node -DCMAKE_INSTALL_PREFIX=/home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node
+[2.464s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.464s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.465s] -- Found geometry_msgs: 4.9.2 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.468s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.471s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.476s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.478s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.478s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.651s] -- Found nav_msgs: 4.9.2 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.765s] -- Found rclcpp: 16.0.21 (/opt/ros/humble/share/rclcpp/cmake)
+[2.963s] -- Found rmw_implementation_cmake: 6.1.4 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.978s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[21.443s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[21.635s] -- Found sensor_msgs: 4.9.2 (/opt/ros/humble/share/sensor_msgs/cmake)
+[21.700s] -- Found tf2: 0.25.23 (/opt/ros/humble/share/tf2/cmake)
+[21.728s] -- Found tf2_msgs: 0.25.23 (/opt/ros/humble/share/tf2_msgs/cmake)
+[21.908s] -- Found turtlebot3_msgs: 2.4.0 (/opt/ros/humble/share/turtlebot3_msgs/cmake)
+[22.401s] -- Configuring done
+[22.473s] -- Generating done
+[22.500s] -- Build files have been written to: /home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node
+[22.574s] Invoked command in '/home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_lab_workspace/install/lab02_pkg:/home/leonardo/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake /home/leonardo/ros2_lab_workspace/src/turtlebot3_simulations/turtlebot3_fake_node -DCMAKE_INSTALL_PREFIX=/home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node
+[22.576s] Invoking command in '/home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_lab_workspace/install/lab02_pkg:/home/leonardo/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --build /home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node -- -j8 -l8
+[22.715s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_fake_node[0m
+[22.788s] [100%] Built target turtlebot3_fake_node
+[22.833s] Invoked command in '/home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_lab_workspace/install/lab02_pkg:/home/leonardo/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --build /home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node -- -j8 -l8
+[22.885s] Invoking command in '/home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_lab_workspace/install/lab02_pkg:/home/leonardo/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --install /home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node
+[22.908s] -- Install configuration: ""
+[22.908s] -- Execute custom install script
+[22.909s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node
+[22.911s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py
+[22.911s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py
+[22.912s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml
+[22.913s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml
+[22.914s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml
+[22.918s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp
+[22.921s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node
+[22.921s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node
+[22.923s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.sh
+[22.932s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.dsv
+[22.933s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.sh
+[22.933s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.dsv
+[22.933s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.bash
+[22.934s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.sh
+[22.936s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.zsh
+[22.937s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.dsv
+[22.937s] -- Symlinking: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv
+[22.987s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/ament_index/resource_index/packages/turtlebot3_fake_node
+[22.989s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[22.991s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[22.993s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig.cmake
+[22.993s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig-version.cmake
+[22.993s] -- Up-to-date symlink: /home/leonardo/ros2_lab_workspace/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.xml
+[23.009s] Invoked command in '/home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/leonardo/ros2_lab_workspace/install/lab02_pkg:/home/leonardo/ros2_lab_workspace/install/lab01_pkg:/opt/ros/humble /usr/bin/cmake --install /home/leonardo/ros2_lab_workspace/build/turtlebot3_fake_node

@@ -14,21 +14,26 @@ class ControllerNode(Node):
 
     def __init__(self):
         super().__init__('controller')
+        
+        self.declare_parameter('velMax', 0.22)
+        self.declare_parameter('velAngMax', 1.5)
+        self.declare_parameter('bumperThreshold', 0.7)
 
-        self.velMax = 0.22
-        self.velAngMax = 1.5
+        self.velMax = self.get_parameter('velMax').get_parameter_value().double_value
+        self.velAngMax = self.get_parameter('velAngMax').get_parameter_value().double_value
+        self.bumperThreshold = self.get_parameter('bumperThreshold').get_parameter_value().double_value
+
         self.loopControl = 0.2
-        self.bumperThreshold = 0.7
         self.state = 'FORWARD'
         self.current_yaw = 0.0
         self.target_yaw = 0.0
         self.exact_yaw = 0.0
+
         #publisher of robot's movement
         self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
         #read Laidar tiopic
         self.create_subscription(LaserScan, "scan", self.LidarCallback,
         qos_profile_sensor_data)
-
         #read Odometry topic
         self.odom_sub = self.create_subscription(
             Odometry,
@@ -42,13 +47,14 @@ class ControllerNode(Node):
         #     self.groundTruthCallback,
         #     10)
 
+
     # The LidrCallback function reads the ranges from LaserScan message of the Lidar,
     # caps the values to avoid problems with inf and nan values.
     # It then calls the moving function to control the robot's movement based on the processed ranges.
     def LidarCallback(self, msg):
         #self.get_logger().info("Recieved ranges from Lidar")
-        capmax = 3.5
-        capmin = 0.12
+        capmax = msg.range_max 
+        capmin = msg.range_min
         ranges_np = np.array(msg.ranges) #transform in numPy array
         angle_min = msg.angle_min
         angle_max = msg.angle_max
@@ -100,26 +106,30 @@ class ControllerNode(Node):
     # In the 'TURNING' state, it calculates the error between the target yaw and the current yaw, and adjusts the robot's angular velocity to rotate towards the target yaw.  
     def moving(self, ranges, angle_min, angle_max, angle_increment):
         msg = Twist()
+
         rangeTotal = 0.174533 #10 degrees (in rad) of range for forward and side scan
         indexRange = math.ceil(rangeTotal/(2*angle_increment)) #calculates the half of index in order to get  total 10 degrees range
+        
         if (angle_min<0.0872665 and angle_max>(6.28319-0.0872665) ): #if angle min is smaller then 5 degrees an angle max greater than 355 degrees the data are used other way discarded
             if self.state == 'FORWARD':
                 front_scan = np.concatenate((ranges[0:indexRange], ranges[-indexRange:]))
                 front_dist = np.median(front_scan) #using np.median to avoid outliers in the front scan given by gaussian errors in the lidar readings                     
+                
                 if front_dist > self.bumperThreshold:
                     msg.linear.x = self.velMax
                     msg.angular.z = 0.0
+                    
                     self.publisher.publish(msg)
                     self.get_logger().info("Moving forward")
+                    
                 else:
                     self.get_logger().info("Obstacle detected")
                     self.state = 'TURNING'
                     msg.linear.x = 0.0
                     self.publisher.publish(msg)
 
-                    num_ranges = len(ranges)
-                    left_idx =math.ceil(num_ranges * 0.25)
-                    right_idx = math.ceil(num_ranges * 0.75)
+                    left_idx = math.ceil((math.pi / 2.0 - angle_min) / angle_increment)
+                    right_idx = math.ceil((3.0 * math.pi / 2.0 - angle_min) / angle_increment)
 
                     dist_left = np.median(ranges[left_idx-indexRange : left_idx+indexRange])#using np.median to avoid outliers in the front scan given by gaussian errors in the lidar readings              
                     dist_right = np.median(ranges[right_idx-indexRange : right_idx+indexRange])#using np.median to avoid outliers in the front scan given by gaussian errors in the lidar readings              
@@ -134,13 +144,12 @@ class ControllerNode(Node):
                     else:
                         self.target_yaw = self.current_yaw - (math.pi / 2.0)
                         self.turn_direction = -1.0 # clockwise rotation
+                    
                     #normalization around pi -pi
                     if self.target_yaw > math.pi:
                         self.target_yaw -= 2 * math.pi
                     elif self.target_yaw < -math.pi:
-                        self.target_yaw += 2 * math.pi
-
-                    
+                        self.target_yaw += 2 * math.pi 
 
             elif self.state == 'TURNING':
                 error = self.target_yaw - self.current_yaw 
